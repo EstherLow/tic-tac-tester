@@ -86,6 +86,7 @@ function simulateGame (testTitle, moves, winner) {
   expect('whoWon should return 0 at start of the game', whoWon(), 0)
 
   for (var i = 0; i < moves.length; ++i) {
+    expect('gameOver should return before a valid turn', isGameOver(), false)
     expect('playTurn should allow move to ' + moves[i], playTurn(moves[i]), true)
     expect('playTurn should not allow move to same square', playTurn(moves[0]), false)
   }

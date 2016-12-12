@@ -26,16 +26,6 @@ It is assumed that the turns of the player will be automatically changed after a
 The application will console log all the passed or failed test */
 
 
-function isGameOver() {
-//It should return a true or false if the game is over.
-
-if (whoWon() === 0) {
-    return false
-  } else {
-  return true
-  }
-}
-
 
 // CONFIG
 var showPasses = true

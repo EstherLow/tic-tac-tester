@@ -24,51 +24,49 @@ function playTurn(index) {
 function whoWon() {
   console.log(grid);
   if ((grid[0] === grid[1]) && (grid[0] === grid[2]) && (grid[0] !== 0)){
-    console.log('top row win');
+    // console.log('top row win');
     return grid[0];
   }
   if ((grid[3] === grid[4]) && (grid[3] === grid[5]) && (grid[3] !== 0)){
-    console.log('middle row win');
+    // console.log('middle row win');
     return grid[3];
   }
   if ((grid[6] === grid[7]) && (grid[6] === grid[8]) && (grid[6] !== 0)){
-    console.log('bottom row win');
+    // console.log('bottom row win');
     return grid[6];
   }
   if ((grid[0] === grid[3]) && (grid[0] === grid[6]) && (grid[0] !== 0)){
-    console.log('left column win');
+    // console.log('left column win');
     return grid[0];
   }
   if ((grid[1] === grid[4]) && (grid[1] === grid[7]) && (grid[1] !== 0)){
-    console.log('middle column win');
+    // console.log('middle column win');
     return grid[1];
   }
   if ((grid[2] === grid[5]) && (grid[2] === grid[8]) && (grid[2] !== 0)){
-    console.log('right column win');
+    // console.log('right column win');
     return grid[2];
   }
   if ((grid[0] === grid[4]) && (grid[0] === grid[8]) && (grid[0] !== 0)){
-    console.log('diagonal win');
+    // console.log('diagonal win');
     return grid[0];
   }
   if ((grid[2] === grid[4]) && (grid[2] === grid[6]) && (grid[2] !== 0)){
-    console.log('diagonal win');
+    // console.log('diagonal win');
     return grid[2];
   }
   for (var i = 0; i <grid.length; i++) {
     if (grid[i] === 0) {
       console.log('game ongoing');
       return 0;
-    } else {
-      console.log('draw');
-      return 3;
     }
   }
+    console.log('draw');
+    return 3;
 }
 
 function isGameOver() {
-//It should return a true or false if the game is over.
-
+console.log(whoWon());
 if (whoWon() === 0) {
     return false
   } else {
